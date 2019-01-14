@@ -49,7 +49,7 @@
 </div>
 </div>
 <h2>安装QUIC反向代理服务器caddy</h2>
-上面我们提到对于同一个域名，TLS/TCP和QUIC必须使用相同的端口号才能成功开启QUIC。然而，caddy服务器的QUIC特性无法单独开启，必须与TLS一起开启，悲剧的是TLS想要使用的TCP 443端口已经被nginx占用了<img class="emoji" draggable="false" src="https://s.w.org/images/core/emoji/11/svg/1f602.svg" alt="😂" />
+上面我们提到对于同一个域名，TLS/TCP和QUIC必须使用相同的端口号才能成功开启QUIC。然而，caddy服务器的QUIC特性无法单独开启，必须与TLS一起开启，悲剧的是TLS想要使用的TCP 443端口已经被nginx占用了
 
 场面虽然有点尴尬，但是我们有docker：将caddy安装到docker中，然后只把本地的UDP 443端口映射到容器中即可。
 
